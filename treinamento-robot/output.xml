@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.1 on win32)" generated="20220106 12:31:37.190" rpa="false" schemaversion="2">
+<suite id="s1" name="Variaveis" source="C:\Users\gsoliveira\sistreinamento\treinamento-robot\variaveis.robot">
+<test id="s1-t1" name="Teste: Imprimir o Dicionario Completo">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PESSOA}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220106 12:31:37.221" endtime="20220106 12:31:37.221"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${PESSOA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220106 12:31:37.221" level="INFO">{'Nome': 'Gabriel de Souza Oliveira', 'Profissao': 'QA', 'Peso': '68', 'Altura': '1.70 Idade=22', 'Genero': 'M'}</msg>
+<status status="PASS" starttime="20220106 12:31:37.221" endtime="20220106 12:31:37.221"/>
+</kw>
+<status status="PASS" starttime="20220106 12:31:37.215" endtime="20220106 12:31:37.221"/>
+</test>
+<test id="s1-t2" name="Teste Imprimir uma informação por vez do Dicionario">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PESSOA.Nome}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220106 12:31:37.227" endtime="20220106 12:31:37.227"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${PESSOA.Profissao}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220106 12:31:37.227" level="INFO">QA</msg>
+<status status="PASS" starttime="20220106 12:31:37.227" endtime="20220106 12:31:37.227"/>
+</kw>
+<status status="PASS" starttime="20220106 12:31:37.226" endtime="20220106 12:31:37.227"/>
+</test>
+<test id="s1-t3" name="Teste: Imprimir uma Lista completa no console">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${LISTA}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220106 12:31:37.227" endtime="20220106 12:31:37.235"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${LISTA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220106 12:31:37.236" level="INFO">['Iphone', 'Samsung', 'Motorolla', 'Xaomi', 'Nokia', 'BlackBerry']</msg>
+<status status="PASS" starttime="20220106 12:31:37.235" endtime="20220106 12:31:37.236"/>
+</kw>
+<status status="PASS" starttime="20220106 12:31:37.227" endtime="20220106 12:31:37.236"/>
+</test>
+<test id="s1-t4" name="Teste: Imprimir um Item da lista Por Vez no console">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${LISTA[0]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220106 12:31:37.236" endtime="20220106 12:31:37.236"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${LISTA[1]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220106 12:31:37.236" endtime="20220106 12:31:37.236"/>
+</kw>
+<status status="PASS" starttime="20220106 12:31:37.236" endtime="20220106 12:31:37.244"/>
+</test>
+<test id="s1-t5" name="Teste: Cálculo da Média">
+<kw name="Evaluate" library="BuiltIn">
+<var>${Resultado}</var>
+<arg>(${NOTA.Nota1} + ${NOTA.Nota2} + ${NOTA.Nota3})/3</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220106 12:31:37.247" level="INFO">${Resultado} = 7.666666666666667</msg>
+<status status="PASS" starttime="20220106 12:31:37.247" endtime="20220106 12:31:37.247"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220106 12:31:37.247" endtime="20220106 12:31:37.247"/>
+</kw>
+<status status="PASS" starttime="20220106 12:31:37.247" endtime="20220106 12:31:37.247"/>
+</test>
+<test id="s1-t6" name="Teste: Cálculo da Média Lista">
+<kw name="Evaluate" library="BuiltIn">
+<var>${Resultado}</var>
+<arg>(${Lista_Notas[0]} + ${Lista_Notas[1]} + ${Lista_Notas[2]})/3</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220106 12:31:37.255" level="INFO">${Resultado} = 8.333333333333334</msg>
+<status status="PASS" starttime="20220106 12:31:37.255" endtime="20220106 12:31:37.255"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Resultado}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220106 12:31:37.255" endtime="20220106 12:31:37.255"/>
+</kw>
+<status status="PASS" starttime="20220106 12:31:37.247" endtime="20220106 12:31:37.255"/>
+</test>
+<status status="PASS" starttime="20220106 12:31:37.190" endtime="20220106 12:31:37.255"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Variaveis">Variaveis</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
